@@ -8,9 +8,9 @@ export default function Header() {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
     { href: "#services", label: "Services" },
     { href: "#projects", label: "Projects" },
+    { href: "/about", label: "About" },
   ];
 
   // This function will handle the click
@@ -46,6 +46,24 @@ export default function Header() {
           {navItems.map((item) => {
             const isActive = location === item.href || (item.href.startsWith('#') && location === '/');
             
+            // --- FIX ---
+            // If the href is an anchor link (starts with #), 
+            // render a standard <a> tag to allow browser scrolling.
+            if (item.href.startsWith("#")) {
+              return (
+                <a key={item.href} href={item.href}>
+                  <Button
+                    variant="ghost"
+                    className="hover-elevate active-elevate-2"
+                    data-testid={`link-nav-${item.label.toLowerCase()}`}
+                  >
+                    {item.label}
+                  </Button>
+                </a>
+              );
+            }
+            
+            // Otherwise, use the wouter <Link> for page navigation.
             return (
               <Link key={item.href} href={item.href}>
                 <Button
@@ -57,6 +75,7 @@ export default function Header() {
                 </Button>
               </Link>
             );
+            // --- END OF FIX ---
           })}
         </nav>
 

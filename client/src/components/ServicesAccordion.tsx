@@ -35,7 +35,7 @@ const services = [
 
 export default function ServicesAccordion() {
   return (
-    <section className="py-16 md:py-24 bg-card text-card-foreground">
+    <section id="services" className="py-16 md:py-24 bg-card text-card-foreground">
       <div className="container mx-auto max-w-4xl px-6">
         <div className="flex flex-col gap-12">
           <div className="text-center">
