@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/generated_images/Hero_code_editor_screenshot_8194607e.png";
+import heroImage from "@assets/generated_images/hero-img.png";
 
 export default function Hero() {
   return (

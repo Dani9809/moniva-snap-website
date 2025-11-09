@@ -22,9 +22,9 @@ export default function Header() {
   // 1. Define all possible nav items
   const allNavItems = [
     { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
     { href: "#services", label: "Services" },
     { href: "#projects", label: "Projects" },
-    { href: "/about", label: "About" },
   ];
 
   // 2. Create a new filtered array based on the current location
@@ -69,7 +69,7 @@ export default function Header() {
             data-testid="img-logo"
           />
           <span className="font-serif text-xl font-bold" data-testid="text-logo">
-            Moniva Snap
+            Moniva <a className="text-amber-400">Snap</a>
           </span>
         </button>
 
