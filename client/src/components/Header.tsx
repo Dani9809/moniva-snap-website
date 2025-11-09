@@ -10,6 +10,7 @@ export default function Header() {
     { href: "/about", label: "About" },
     { href: "#services", label: "Services" },
     { href: "#projects", label: "Projects" },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (
@@ -39,7 +40,9 @@ export default function Header() {
           })}
         </nav>
 
-        <Button data-testid="button-contact">Contact Us</Button>
+        <Link href="/contact">
+          <Button data-testid="button-contact">Contact Us</Button>
+        </Link>
       </div>
     </header>
   );

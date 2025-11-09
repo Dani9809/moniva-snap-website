@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import { Link } from "wouter";
 import heroImage from "@assets/generated_images/Hero_code_editor_screenshot_8194607e.png";
 
 export default function Hero() {
@@ -18,14 +19,18 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="gap-2" data-testid="button-start-project">
-                Start Your Project
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-              <Button size="lg" variant="outline" className="gap-2" data-testid="button-view-work">
-                <Play className="h-4 w-4" />
-                View Our Work
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="gap-2" data-testid="button-start-project">
+                  Start Your Project
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </Link>
+              <a href="#projects">
+                <Button size="lg" variant="outline" className="gap-2" data-testid="button-view-work">
+                  <Play className="h-4 w-4" />
+                  View Our Work
+                </Button>
+              </a>
             </div>
           </div>
 

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 export default function CTASection() {
   return (
@@ -12,15 +13,17 @@ export default function CTASection() {
           <p className="text-lg md:text-xl opacity-90 max-w-2xl" data-testid="text-cta-subtitle">
             Ready to bring your vision to life? Get in touch with us today and let's create something amazing together.
           </p>
-          <Button
-            size="lg"
-            variant="secondary"
-            className="gap-2 text-lg px-8"
-            data-testid="button-cta"
-          >
-            Get Started Now
-            <ArrowRight className="h-5 w-5" />
-          </Button>
+          <Link href="/contact">
+            <Button
+              size="lg"
+              variant="secondary"
+              className="gap-2 text-lg px-8"
+              data-testid="button-cta"
+            >
+              Get Started Now
+              <ArrowRight className="h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
